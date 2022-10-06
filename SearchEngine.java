@@ -40,12 +40,12 @@ class Handler implements URLHandler {
             String ret = "";
             if(parameters[0].equals("s")){
                 String sub = parameters[1];
-                for(int i = 0; i<= list.size(); i++){
+                for(int i = 0; i< list.size(); i++){
                     if(list.get(i).contains(sub)){
-                        ret = ret + " ";
+                        ret = ret + list.get(i) + " ";
                     }
                 }
-                return String.format("Search results: ", ret);
+                return String.format("Search results: %s", ret);
             }
         }
         return "404 Not Found!";
